@@ -1,0 +1,9 @@
+{
+    "CAN signals": "C",
+    "Calibration, non-volatile memory (fixed calibration)": "F",
+    "Calibration, volatile memory": "K",
+    "Local variable, volatile memory": "L",
+    "Global variable, non-volatile memory": "N",
+    "Global variable, volatile memory": "V",
+    "Member of a Structure": "M"
+}
