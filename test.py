@@ -11,7 +11,7 @@ result = namer.generate_variable_name(
     data_type="Global variable, volatile memory", 
     data_size="Array/vector",
     unit="Binary (true/false)", 
-    description="this Balance Velocity Solution", 
+    description="this is related to battery management system", 
     standard="autosar"
 )
 

@@ -1,4 +1,4 @@
 {
-  "fields": ["module", "data_type", "data_size", "unit", "description"],
-  "template": "{data_type}_{data_size}_{module}_{unit}_{description}"
+  "fields": ["module", "data_type", "data_size", "unit", "description","temp"],
+  "template": "{data_size}_{module}_{unit}_{description}_{data_type}__{temp}"
 }
