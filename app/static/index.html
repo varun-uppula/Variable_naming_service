@@ -1,0 +1,134 @@
+<!-- app/static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Name Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+<div class="container">
+    <h2>Generate Variable Name</h2>
+
+    <div class="form-group">
+        <label for="format">Format:</label>
+        <select id="format">
+            <option value="">Select format</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="standard">Standard:</label>
+        <select id="standard">
+            <option value="">Select standard</option>
+        </select>
+    </div>
+
+    <div id="fields-container"></div>
+
+    <button id="generate-btn">Generate</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    const BACKEND_URL = "http://192.168.9.168:8000";
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        const formatSelect = document.getElementById('format');
+        const standardSelect = document.getElementById('standard');
+
+        // Load formats
+        const formatRes = await fetch(`${BACKEND_URL}/formats`);
+        const formats = await formatRes.json();
+        for (const key in formats) {
+            const opt = document.createElement('option');
+            opt.value = key;
+            opt.textContent = key;
+            formatSelect.appendChild(opt);
+        }
+
+        // Load standards
+        const standardRes = await fetch(`${BACKEND_URL}/standards`);
+        const standards = await standardRes.json();
+        standards.standards.forEach(std => {
+            const opt = document.createElement('option');
+            opt.value = std;
+            opt.textContent = std;
+            standardSelect.appendChild(opt);
+        });
+    });
+
+    // Load fields dynamically
+    document.getElementById('format').addEventListener('change', async (e) => {
+        const format = e.target.value;
+        const fieldsContainer = document.getElementById('fields-container');
+        fieldsContainer.innerHTML = '';
+
+        if (!format) return;
+
+        const res = await fetch(`${BACKEND_URL}/fields/${format}`);
+        const data = await res.json();
+        const fields = data.fields;
+
+        for (const fieldName in fields) {
+            const group = document.createElement('div');
+            group.classList.add('form-group');
+
+            const label = document.createElement('label');
+            label.textContent = `Enter ${fieldName}:`;
+
+            let input;
+            if (fields[fieldName].type === 'select') {
+                input = document.createElement('select');
+                fields[fieldName].options.forEach(opt => {
+                    const option = document.createElement('option');
+                    option.value = opt;
+                    option.textContent = opt;
+                    input.appendChild(option);
+                });
+            } else {
+                input = document.createElement('input');
+                input.type = 'text';
+            }
+
+            input.name = fieldName;
+            group.appendChild(label);
+            group.appendChild(input);
+            fieldsContainer.appendChild(group);
+        }
+    });
+
+    // Generate button
+    document.getElementById('generate-btn').addEventListener('click', async () => {
+        const format = document.getElementById('format').value;
+        const standard = document.getElementById('standard').value;
+        const resultDiv = document.getElementById('result');
+
+        if (!format || !standard) {
+            resultDiv.textContent = "Please select format and standard.";
+            return;
+        }
+
+        const fields = {};
+        document.querySelectorAll('#fields-container input, #fields-container select').forEach(el => {
+            fields[el.name] = el.value;
+        });
+
+        const res = await fetch(`${BACKEND_URL}/generate-variable-name/${format}/${standard}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(fields)
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+            resultDiv.textContent = `Generated Variable Name: ${data.variable_name}`;
+        } else {
+            resultDiv.textContent = data.detail || "Error generating name.";
+        }
+    });
+</script>
+</body>
+</html>

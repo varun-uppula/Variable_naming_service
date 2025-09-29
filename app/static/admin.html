@@ -1,0 +1,117 @@
+<!-- app/static/admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Pending Variables</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+<div class="container">
+    <h2>Pending Variable Approvals</h2>
+
+    <div class="form-group">
+        <label for="standard">Select Standard:</label>
+        <select id="standard">
+            <option value="">Select standard</option>
+        </select>
+    </div>
+
+    <ul id="pending-list"></ul>
+
+    <button id="approve-btn">Approve Selected</button>
+    <button id="delete-btn">Delete Selected</button>
+
+</div>
+
+<script>
+    const BACKEND_URL = "http://192.168.9.168:8000";
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        const standardSelect = document.getElementById('standard');
+        const res = await fetch(`${BACKEND_URL}/standards`);
+        const standards = await res.json();
+        standards.standards.forEach(std => {
+            const opt = document.createElement('option');
+            opt.value = std;
+            opt.textContent = std;
+            standardSelect.appendChild(opt);
+        });
+    });
+
+    document.getElementById('standard').addEventListener('change', async (e) => {
+        const standard = e.target.value;
+        const list = document.getElementById('pending-list');
+        list.innerHTML = '';
+
+        if (!standard) return;
+
+        const res = await fetch(`${BACKEND_URL}/pending/${standard}`);
+        const data = await res.json();
+
+        for (const variable in data) {
+            const li = document.createElement('li');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.value = variable;
+
+            li.appendChild(checkbox);
+            li.appendChild(document.createTextNode(` ${variable} — ${data[variable]}`));
+            list.appendChild(li);
+        }
+    });
+
+    document.getElementById('approve-btn').addEventListener('click', async () => {
+        const standard = document.getElementById('standard').value;
+        const selected = Array.from(document.querySelectorAll('#pending-list input:checked'))
+                              .map(cb => cb.value);
+
+        if (selected.length === 0) {
+            alert("No variables selected.");
+            return;
+        }
+
+        const res = await fetch(`${BACKEND_URL}/admin/actions/${standard}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ variables: selected, action: "approve" })
+        });
+
+
+        if (res.ok) {
+            alert("Approved successfully.");
+            document.getElementById('standard').dispatchEvent(new Event('change'));
+        } else {
+            alert("Approval failed.");
+        }
+    });
+
+    document.getElementById('delete-btn').addEventListener('click', async () => {
+        const standard = document.getElementById('standard').value;
+        const selected = Array.from(document.querySelectorAll('#pending-list input:checked'))
+                            .map(cb => cb.value);
+
+        if (selected.length === 0) {
+            alert("No variables selected.");
+            return;
+        }
+
+        const res = await fetch(`${BACKEND_URL}/admin/actions/${standard}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ variables: selected, action: "delete" })
+        });
+
+        if (res.ok) {
+            alert("Deleted successfully.");
+            document.getElementById('standard').dispatchEvent(new Event('change'));
+        } else {
+            alert("Delete failed.");
+        }
+    });
+
+
+</script>
+</body>
+</html>

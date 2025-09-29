@@ -1,0 +1,15 @@
+[Unit]
+Description=FastAPI App (with venv)
+After=network.target
+
+[Service]
+User=navpc24
+WorkingDirectory=/home/navpc24/Desktop/variable_naming_service
+ExecStart=/home/navpc24/Desktop/variable_naming_service/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+Restart=always
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
+

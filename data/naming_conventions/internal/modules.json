@@ -1,0 +1,15 @@
+{
+    "State of Charge": "Soc",
+    "State of Health": "Soh",
+    "Thermal Management": "Therm",
+    "Charge": "Chrg",
+    "Discharge": "Dchrg",
+    "Balance Control": "Balctl",
+    "Battery State Machine": "Battsm",
+    "Cell Monitor": "Cellmnt",
+    "Temperature Monitor": "Tmpmnt",
+    "Coulomb Count": "Coul",
+    "Limit Control": "Limctl",
+    "Power Monitor": "Pwrmnt",
+    "Usable Energy Prediction Module": "Uepm"
+}
