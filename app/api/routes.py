@@ -69,9 +69,7 @@ def get_standards():
         return {"standards": []}
     return {"standards": os.listdir(base_path)}
 
-# -----------------------------
-# Variable Name Generation
-# -----------------------------
+
 @router.get("/fields/{format}")
 def get_format_fields(format: str):
     base_path = os.path.join(os.getcwd(), f"data/naming_conventions/{format}")
@@ -103,6 +101,10 @@ def get_format_fields(format: str):
 
     return {"format": format, "fields": response}
 
+
+# -----------------------------
+# Variable Name Generation
+# -----------------------------
 @router.post("/generate-variable-name/{format}/{standard}")
 async def gen_var_name(format: str, standard: str, request: Request):
     try:
@@ -125,8 +127,10 @@ async def gen_var_name(format: str, standard: str, request: Request):
 
     return {"variable_name": variable_name, "status": "pending"}
 
+
+
 # -----------------------------
-# Admin: Variable Approval (JSON-based)
+# Admin: Approval (JSON-based)
 # -----------------------------
 @router.get("/pending/{standard}")
 def get_pending_variables(standard: str):
@@ -135,21 +139,29 @@ def get_pending_variables(standard: str):
     return load_json(pending_path)
 
 @router.post("/admin/actions/{standard}")
-def admin_actions(
+async def admin_actions(
     standard: str,
+    request: Request,
     variables: List[str] = Body(..., embed=True),
     action: Optional[str] = Body(...),
 ):
-    if action == "approve":
-        approved_items = self._approve_abbreviations(standard, variables)
-        if approved_items:
-            return {"status": "approved", "approved": approved_items}
+    try:
+        # You can parse other data from request if needed
+        service = NamingService(format="abs", standard=standard)  # Use appropriate format if needed
+
+        if action == "approve":
+            approved_items = service._approve_abbreviations(standard, variables)
+            if approved_items:
+                return {"status": "approved", "approved": approved_items}
+            else:
+                return {"status": "error", "message": "No variables approved"}
+
+        elif action == "delete":
+            service._delete_pending_abbreviations(standard, variables)
+            return {"status": "deleted", "deleted": variables}
+
         else:
-            return {"status": "error", "message": "No variables approved"}
+            return {"status": "error", "message": "Invalid action"}
 
-    elif action == "delete":
-        self._delete_pending_abbreviations(standard, variables)
-        return {"status": "deleted", "deleted": variables}
-
-    else:
-        return {"status": "error", "message": "Invalid action"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")

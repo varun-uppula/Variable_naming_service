@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 from app.api import routes
-from app.models.database import init_db
+
 
 app = FastAPI(title="Variable Naming Service")
 

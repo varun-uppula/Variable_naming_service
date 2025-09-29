@@ -17,5 +17,8 @@
     "CtAtddrv_kWh_CmplxBtrySgnl": "complex battery signals",
     "a_Soc_A__C__": "",
     "axulary": "Axlr",
-    "a_Soc_A_AxlrBtryMdl_C__": "axulary battery module"
+    "a_Soc_A_AxlrBtryMdl_C__": "axulary battery module",
+    "koushik": "Kshk",
+    "ambadi": "Ambd",
+    "CaAtddrv_A_KshkAmbd": "koushik ambadi"
 }

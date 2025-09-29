@@ -2,7 +2,6 @@ import json
 import re
 
 import os
-from app.models.database import SessionLocal, VariableName
 from app.services.llm_abbreviator import get_abbreviation_from_llm
 
 class NamingService:
