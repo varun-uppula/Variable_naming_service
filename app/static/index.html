@@ -1,0 +1,144 @@
+<!-- app/static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Name Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="mb-4">Generate Variable Name</h2>
+
+        <div class="mb-3">
+            <label for="format" class="form-label">Format:</label>
+            <select id="format" class="form-select">
+                <option value="">Select format</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="standard" class="form-label">Standard:</label>
+            <select id="standard" class="form-select">
+                <option value="">Select standard</option>
+            </select>
+        </div>
+
+        <div id="fields-container"></div>
+
+        <button id="generate-btn" class="btn btn-success mt-3">Generate</button>
+
+        <div class="alert alert-info mt-4 d-none" id="result"></div>
+    </div>
+</div>
+
+<script>
+    const BACKEND_URL = "http://192.168.9.168:8000";
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        const formatSelect = document.getElementById('format');
+        const standardSelect = document.getElementById('standard');
+
+        const formatRes = await fetch(`${BACKEND_URL}/formats`);
+        const formats = await formatRes.json();
+        for (const key in formats) {
+            const opt = document.createElement('option');
+            opt.value = key;
+            opt.textContent = key;
+            formatSelect.appendChild(opt);
+        }
+
+        const standardRes = await fetch(`${BACKEND_URL}/standards`);
+        const standards = await standardRes.json();
+        standards.standards.forEach(std => {
+            const opt = document.createElement('option');
+            opt.value = std;
+            opt.textContent = std;
+            standardSelect.appendChild(opt);
+        });
+    });
+
+    document.getElementById('format').addEventListener('change', async (e) => {
+        const format = e.target.value;
+        const fieldsContainer = document.getElementById('fields-container');
+        fieldsContainer.innerHTML = '';
+
+        if (!format) return;
+
+        const res = await fetch(`${BACKEND_URL}/fields/${format}`);
+        const data = await res.json();
+        const fields = data.fields;
+
+        for (const fieldName in fields) {
+            const div = document.createElement('div');
+            div.classList.add('mb-3');
+
+            const label = document.createElement('label');
+            label.classList.add('form-label');
+            label.textContent = `Enter ${fieldName}:`;
+
+            let input;
+            if (fields[fieldName].type === 'select') {
+                input = document.createElement('select');
+                input.classList.add('form-select');
+                fields[fieldName].options.forEach(opt => {
+                    const option = document.createElement('option');
+                    option.value = opt;
+                    option.textContent = opt;
+                    input.appendChild(option);
+                });
+            } else {
+                input = document.createElement('input');
+                input.type = 'text';
+                input.classList.add('form-control');
+            }
+
+            input.name = fieldName;
+
+            div.appendChild(label);
+            div.appendChild(input);
+            fieldsContainer.appendChild(div);
+        }
+    });
+
+    document.getElementById('generate-btn').addEventListener('click', async () => {
+        const format = document.getElementById('format').value;
+        const standard = document.getElementById('standard').value;
+        const resultDiv = document.getElementById('result');
+
+        if (!format || !standard) {
+            resultDiv.classList.remove('d-none', 'alert-success');
+            resultDiv.classList.add('alert-danger');
+            resultDiv.textContent = "Please select format and standard.";
+            return;
+        }
+
+        const fields = {};
+        document.querySelectorAll('#fields-container input, #fields-container select').forEach(el => {
+            fields[el.name] = el.value;
+        });
+
+        const res = await fetch(`${BACKEND_URL}/generate-variable-name/${format}/${standard}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(fields)
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+            resultDiv.classList.remove('d-none', 'alert-danger');
+            resultDiv.classList.add('alert-success');
+            resultDiv.textContent = `Generated Variable Name: ${data.variable_name}`;
+        } else {
+            resultDiv.classList.remove('d-none', 'alert-success');
+            resultDiv.classList.add('alert-danger');
+            resultDiv.textContent = data.detail || "Error generating name.";
+        }
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1010 @@
+INFO:     192.168.9.66:63304 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63304 - "GET /openapi.json HTTP/1.1" 200 OK
+Error from Cohere Chat API: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': '6fe638400d81e723c3c11f9ee3edbfde', 'x-endpoint-monthly-call-limit': '1000', 'x-trial-endpoint-call-limit': '10', 'x-trial-endpoint-call-remaining': '9', 'date': 'Tue, 16 Sep 2025 13:39:18 GMT', 'content-length': '192', 'x-envoy-upstream-service-time': '24', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 404, body: {'id': 'df8102fd-34a2-48fc-972b-3e8fd0037abe', 'message': "model 'command-r' was removed on September 15, 2025. See https://docs.cohere.com/docs/models for a list of models you can use instead."}
+INFO:     192.168.9.66:63305 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63345 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63345 - "GET /openapi.json HTTP/1.1" 200 OK
+Error from Cohere Chat API: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': 'b562b5a7c2cfc12a05a0a5f4b489cbfb', 'x-endpoint-monthly-call-limit': '1000', 'x-trial-endpoint-call-limit': '10', 'x-trial-endpoint-call-remaining': '9', 'date': 'Tue, 16 Sep 2025 13:41:56 GMT', 'content-length': '192', 'x-envoy-upstream-service-time': '21', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 404, body: {'id': 'eb98ab37-0169-4054-aa5a-d03acb8034de', 'message': "model 'command-r' was removed on September 15, 2025. See https://docs.cohere.com/docs/models for a list of models you can use instead."}
+INFO:     192.168.9.66:63346 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+Error from Cohere Chat API: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': '69fbce6aedf41525bd4264dfe88d524c', 'x-endpoint-monthly-call-limit': '1000', 'x-trial-endpoint-call-limit': '10', 'x-trial-endpoint-call-remaining': '8', 'date': 'Tue, 16 Sep 2025 13:42:26 GMT', 'content-length': '192', 'x-envoy-upstream-service-time': '17', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 404, body: {'id': '78339860-54db-436a-9cf0-95708ca62349', 'message': "model 'command-r' was removed on September 15, 2025. See https://docs.cohere.com/docs/models for a list of models you can use instead."}
+INFO:     192.168.9.66:63363 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63397 - "GET /openapi.json HTTP/1.1" 200 OK
+Error from Cohere Chat API: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin', 'x-accel-expires': '0', 'x-debug-trace-id': 'ed608241db57ebbe46703f0449f346ab', 'x-endpoint-monthly-call-limit': '1000', 'x-trial-endpoint-call-limit': '10', 'x-trial-endpoint-call-remaining': '9', 'date': 'Tue, 16 Sep 2025 13:46:42 GMT', 'content-length': '192', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'}, status_code: 404, body: {'id': '5de09f63-9e48-436a-963c-7b4952bbc325', 'message': "model 'command-r' was removed on September 15, 2025. See https://docs.cohere.com/docs/models for a list of models you can use instead."}
+INFO:     192.168.9.66:63400 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63433 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63433 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63433 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63433 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63433 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63433 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63433 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63433 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63436 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+Error from Cohere Chat API: Expecting value: line 1 column 1 (char 0)
+INFO:     192.168.9.66:63438 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63442 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63500 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63500 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63503 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63505 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63521 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63522 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63523 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+Error from Cohere Chat API: Expecting value: line 1 column 1 (char 0)
+INFO:     192.168.9.66:63549 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+Error from Cohere Chat API: Expecting value: line 1 column 1 (char 0)
+INFO:     192.168.9.66:63553 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63627 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63628 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63631 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63634 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63642 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:64625 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:64625 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:64641 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:64641 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54102 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54102 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54104 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54147 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54150 - "GET /fields/autosar HTTP/1.1" 404 Not Found
+INFO:     192.168.9.66:54151 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54151 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54152 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54160 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54302 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54589 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54589 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54590 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54590 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54592 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54652 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54652 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54653 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:54666 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+Error from OpenAI Chat API: Error communicating with OpenAI: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7df30212e740>: Failed to resolve 'api.openai.com' ([Errno -3] Temporary failure in name resolution)"))
+(None, {})
+INFO:     192.168.9.66:61031 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:61031 - "GET /openapi.json HTTP/1.1" 200 OK
+Error from OpenAI Chat API: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+INFO:     192.168.9.66:61032 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+Error from OpenAI Chat API: Error communicating with OpenAI: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x75293451e740>: Failed to resolve 'api.openai.com' ([Errno -3] Temporary failure in name resolution)"))
+(None, {})
+INFO:     192.168.9.66:50155 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50155 - "GET /openapi.json HTTP/1.1" 200 OK
+Error from OpenAI Chat API: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+INFO:     192.168.9.66:50156 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50200 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50200 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50200 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50200 - "GET /openapi.json HTTP/1.1" 200 OK
+Looking up normalized description: 'positivemanagementcontrolcontactor' in standard: autosar
+Not found in dataset. Generating via LLM...
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "PMCC",
+  "new_abbreviations": {
+    "positive": "PM",
+    "management": "MN",
+    "control": "CTL",
+    "conactor": "CNCTR"
+  }
+}
+=================================
+
+INFO:     192.168.9.66:50210 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50375 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50375 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50376 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50376 - "GET /openapi.json HTTP/1.1" 200 OK
+Error calling Ollama API: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7155c0a3c340>: Failed to establish a new connection: [Errno 111] Connection refused'))
+INFO:     192.168.9.66:50759 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50759 - "GET /openapi.json HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "VlmStMac",
+  "new_abbreviations": {
+    "voltage": "Vol",
+    "state": "St",
+    "machine": "Mac"
+  }
+}
+=================================
+
+Extracted JSON (length 126):
+'{\n  "final_variable": "VlmStMac",\n  "new_abbreviations": {\n    "voltage": "Vol",\n    "state": "St",\n    "machine": "Mac"\n  }\n}'
+INFO:     192.168.9.66:50758 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50772 - "GET /pending/autosar HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "StMacUnique",
+  "new_abbreviations": {
+    "unique": "Unq"
+  }
+}
+=================================
+
+Extracted JSON (length 87):
+'{\n  "final_variable": "StMacUnique",\n  "new_abbreviations": {\n    "unique": "Unq"\n  }\n}'
+INFO:     192.168.9.66:50773 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "OpenStOfHealth",
+  "new_abbreviations": {
+    "contractor": "Contr"
+  }
+}
+
+Explanation:
+- "open" is already listed in the known abbreviations, so we can use it as-is.
+- "state" and "of" are also listed, so we keep them as "St" and "Of", respectively.
+- "contractor" is a new technical word that was not listed in the known abbreviations. We create a new entry in the "new_abbreviations" dictionary with an abbreviation of "Contr". This new abbreviation is used as-is in the final variable name, along with the other already abbreviated words.
+- All variables are in PascalCase format and consist only of abbreviations, no extra words or structural language are included.
+=================================
+
+Extracted JSON (length 96):
+'{\n  "final_variable": "OpenStOfHealth",\n  "new_abbreviations": {\n    "contractor": "Contr"\n  }\n}'
+INFO:     192.168.9.66:50778 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50973 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50973 - "GET /openapi.json HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "HlBtr",
+  "new_abbreviations": {
+    "hello": "Hl",
+    "better": "Btr"
+  }
+}
+=================================
+
+Extracted JSON (length 100):
+'{\n  "final_variable": "HlBtr",\n  "new_abbreviations": {\n    "hello": "Hl",\n    "better": "Btr"\n  }\n}'
+INFO:     192.168.9.66:50982 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:51002 - "GET /fields/abs HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "MngtCtlGrpMob",
+  "new_abbreviations": {
+    "mobile": "Mbl"
+  }
+}
+
+Explanation:
+- Management control grip mobile is broken down into its technical components: management (Mngt), control (Ctrl), grip (Grip), and mobile (Mbl).
+- Only the first three words are included in the final variable name, as they represent technical concepts relevant to embedded automotive systems.
+- The last word, "mobile", is not included because it does not have a technical meaning and is instead a functional descriptor. However, if this was an abbreviation that was explicitly listed in the known abbreviations dictionary, then it could be used instead.
+- All words are converted to their shortest possible abbreviation, with each word separated by a capital letter (PascalCase format).
+- The "new_abbreviations" dictionary is provided to add additional custom abbreviations, such as "mobile" in this case. These abbreviations must be used exactly as specified in the dictionary and cannot be expanded or modified within the final variable name.
+=================================
+
+Extracted JSON (length 89):
+'{\n  "final_variable": "MngtCtlGrpMob",\n  "new_abbreviations": {\n    "mobile": "Mbl"\n  }\n}'
+INFO:     192.168.9.66:51028 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "MngtCtlGripMb",
+  "new_abbreviations": {
+    "mobile": "Mbl"
+  }
+}
+
+Explanation:
+- Management control grip mobile (Mngt Ctrl Grip Mbl) is first broken down into technical words (Mngt, Ctrl, Grip, Mobile).
+- Since Mobile is not in the known abbreviations list, it's added as a new abbreviation "abbr1". This new abbreviation is used exactly as-is in the final variable name. 
+- The rest of the words are directly reduced to their technical abbreviations (Mngt = M, Ctrl = C, Grip = G).
+- The final variable name is then formed by concatenating all the technical abbreviations in PascalCase format.
+- The "final_variable" must be built only from these listed abbreviations and no extra words or unexplained abbreviations are allowed. 
+
+Hence, the final variable name is MngtCtlGripMb.
+=================================
+
+Extracted JSON (length 89):
+'{\n  "final_variable": "MngtCtlGripMb",\n  "new_abbreviations": {\n    "mobile": "Mbl"\n  }\n}'
+INFO:     192.168.9.66:51033 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "HndbrkVelGripMbile",
+  "new_abbreviations": {}
+}
+=================================
+
+Extracted JSON (length 71):
+'{\n  "final_variable": "HndbrkVelGripMbile",\n  "new_abbreviations": {}\n}'
+INFO:     192.168.9.66:51049 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "BattUnitStaby",
+  "new_abbreviations": {}
+}
+=================================
+
+Extracted JSON (length 66):
+'{\n  "final_variable": "BattUnitStaby",\n  "new_abbreviations": {}\n}'
+INFO:     192.168.9.66:51082 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "BattKoushikSpd",
+  "new_abbreviations": {
+    "koushik": "Kshk"
+  }
+}
+=================================
+
+Extracted JSON (length 92):
+'{\n  "final_variable": "BattKoushikSpd",\n  "new_abbreviations": {\n    "koushik": "Kshk"\n  }\n}'
+INFO:     192.168.9.66:51094 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "BatCtrldSys",
+  "new_abbreviations": {
+    "batter": "Batt",
+    "controlled": "Ctrld",
+    "system": "Sys"
+  }
+}
+=================================
+
+Extracted JSON (length 136):
+'{\n  "final_variable": "BatCtrldSys",\n  "new_abbreviations": {\n    "batter": "Batt",\n    "controlled": "Ctrld",\n    "system": "Sys"\n  }\n}'
+INFO:     192.168.9.66:51114 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58213 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58213 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58213 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58213 - "GET /openapi.json HTTP/1.1" 200 OK
+
+====== RAW OLLAMA RESPONSE ======
+{
+  "final_variable": "MngtThermUnit",
+  "new_abbriviations": {
+    "originalWord1": "Pwr",
+    "originalWord2": "Ctl"
+  }
+}
+
+// Explanation:
+// Since the given description does not contain any new abbreviations, we are using the known ones.
+// However, if there were some new terms like Power and Control, then we would have added them in the new_abbreviations dictionary with their respective short forms as 'Pwr' and 'Ctl' respectively.
+// In that case, our final_variable would be "MngtThermUnitPwrCtl".
+=================================
+
+Extracted JSON (length 124):
+'{\n  "final_variable": "MngtThermUnit",\n  "new_abbriviations": {\n    "originalWord1": "Pwr",\n    "originalWord2": "Ctl"\n  }\n}'
+INFO:     192.168.9.66:58215 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:51154 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:51174 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:51174 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:51173 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.9.66:51175 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:51175 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:57170 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.9.66:58649 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58649 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58666 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58666 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58666 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58666 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58668 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.9.66:58700 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58700 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58697 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58706 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58706 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58707 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:58707 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53027 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53049 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.57:58977 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.57:58977 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.57:58978 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.57:58989 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53144 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53144 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.103:55324 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.103:55324 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.57:58997 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53162 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53162 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53164 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.57:59003 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.57:59009 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53189 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53192 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:53228 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.57:59348 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:57224 - "GET /index.html HTTP/1.1" 404 Not Found
+INFO:     192.168.9.168:57224 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.9.168:53198 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.9.168:35946 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54012 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54012 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54011 - "GET /index.html HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54011 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54011 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54011 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54015 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54015 - "GET /fields/detail HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54016 - "GET /admin.html HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54016 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54038 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54038 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54039 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54042 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54046 - "GET /fields/abs HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54109 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54109 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54110 - "GET /index.html HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54110 - "GET /style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54110 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /index.html HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54110 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /index.html HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54110 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /index.html HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54110 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /index.html HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54110 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /index.html HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54110 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /index.html HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54110 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54110 - "GET /standards HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54116 - "GET /formats HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54135 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54135 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54136 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54137 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54171 - "GET /style.css HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54171 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54171 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54172 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54177 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54178 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54179 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54180 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54182 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54182 - "GET /style.css HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54182 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54182 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54182 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54181 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54184 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54185 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54186 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54187 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54188 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54189 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54190 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54191 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54192 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54193 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54194 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54195 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54196 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54197 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54198 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54198 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54199 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54200 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54201 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54202 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54203 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54204 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54205 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54206 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54207 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54208 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54209 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54210 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54211 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54212 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54213 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54214 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54215 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54216 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54217 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54218 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54219 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54220 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54221 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54222 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54223 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54224 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54225 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54225 - "GET /style.css HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54225 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54225 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54225 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54226 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54234 - "POST /generate-variable-name/internal/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:43290 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54277 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54277 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54278 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54293 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54293 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54293 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54293 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54293 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54293 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54292 - "POST /generate-variable-name/internal/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54292 - "POST /generate-variable-name/internal/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54292 - "POST /generate-variable-name/internal/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54292 - "POST /generate-variable-name/internal/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54292 - "POST /generate-variable-name/internal/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54292 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54303 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54303 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54309 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54310 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54311 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54312 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54313 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54314 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54315 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54316 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54317 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54318 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54319 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54320 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54321 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54322 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54323 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54324 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54325 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54326 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54327 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54328 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54329 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54330 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54331 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54332 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54333 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54334 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54335 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54336 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54337 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54338 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54339 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54340 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54341 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54342 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54343 - "POST /generate-variable-name/internal/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54345 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54347 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54348 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54349 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54350 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54351 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54352 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54353 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54354 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54355 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54356 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54357 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54358 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54359 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54360 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54361 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54362 - "POST /generate-variable-name/abs/internal HTTP/1.1" 500 Internal Server Error
+INFO:     192.168.10.160:54363 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54390 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54394 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54397 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET /style.css HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54400 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET /style.css HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54400 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET /style.css HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54400 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54400 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54401 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54403 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54428 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54491 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54498 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54498 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54499 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54510 - "GET /index.html HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54511 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54511 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54511 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54511 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54513 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54523 - "POST /generate-variable-name/internal/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54527 - "GET /admin HTTP/1.1" 404 Not Found
+INFO:     192.168.9.104:57867 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.104:57867 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54558 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54558 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54558 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54559 - "POST /approve/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54559 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54565 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54565 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54565 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54566 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54566 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54566 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54567 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54575 - "POST /approve/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54575 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54622 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54622 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54622 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54622 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54623 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54623 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54637 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54653 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54653 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54653 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54654 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54665 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54683 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54683 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54683 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54684 - "POST /admin/actions/internal HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54699 - "POST /admin/actions/internal HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54703 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54703 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54703 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54702 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54704 - "POST /admin/actions/internal HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54707 - "POST /admin/actions/internal HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54711 - "POST /admin/actions/internal HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54729 - "POST /admin/actions/internal HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54730 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54730 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54730 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54731 - "POST /admin/actions/internal HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54738 - "POST /admin/actions/internal HTTP/1.1" 404 Not Found
+INFO:     192.168.10.160:54740 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54740 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54741 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54741 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54760 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54760 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54758 - "POST /admin/actions/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54758 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54759 - "POST /admin/actions/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54759 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54776 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54776 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54776 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54776 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54888 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54888 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:54888 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54889 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54889 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54890 - "POST /admin/actions/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54892 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54893 - "POST /admin/actions/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54893 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54898 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54898 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54899 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54899 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54899 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:54914 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57780 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57780 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57780 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57780 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57780 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.9.78:57784 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61649 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61649 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61649 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61650 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.10.57:61654 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61655 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61659 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61659 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61659 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61659 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57797 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57797 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57818 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61660 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57820 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57825 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57825 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57825 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57827 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57828 - "POST /generate-variable-name/internal/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57830 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57830 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57830 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57830 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61670 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61672 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57838 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57838 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57838 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57840 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61674 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61675 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57841 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57846 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57846 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57848 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61679 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61680 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57850 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57850 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.78:57850 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61684 - "POST /admin/actions/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.57:61684 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:59122 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:59122 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34914 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34914 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34914 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34914 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.9.168:34914 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34920 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34920 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34920 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34920 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.168:59476 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:36318 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:36326 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55266 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:48916 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54015 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54015 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.9.78:54015 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54021 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54025 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54025 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54025 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54028 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54030 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54032 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.78:54033 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55657 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55657 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.10.160:55657 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55657 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55657 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55658 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55713 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55713 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55713 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55720 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:55722 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:57984 - "POST /admin/actions/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:57984 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56290 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56305 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56328 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56329 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56330 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56331 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56332 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56333 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56339 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56340 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56341 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56349 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56349 - "POST /generate-variable-name/internal/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56351 - "POST /generate-variable-name/internal/internal HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56354 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.10.160:56354 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63792 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63792 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63793 - "GET /index HTTP/1.1" 404 Not Found
+INFO:     192.168.9.66:63793 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.9.66:63796 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63796 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63796 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63799 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63799 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63799 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63804 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63040 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50507 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:50511 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:57819 - "POST /generate-variable-name/abs/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63701 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63703 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63703 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63703 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49180 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:46770 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:46438 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:41918 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.66:62987 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.66:62987 - "GET /standards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38900 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:32840 - "GET /pending/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.168:32840 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:32840 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:32840 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:32840 - "GET /pending/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:63013 - "GET /admin HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48780 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:41688 - "GET /standards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53078 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:40490 - "GET /standards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43270 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:35032 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:35032 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:48688 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:48688 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:40920 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:40920 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:40920 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:40920 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:47802 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.168:47802 - "GET /standards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54946 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:42370 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:42370 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60768 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60768 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60768 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60772 - "POST /generate-variable-name/abs/internal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58620 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:53302 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:53302 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:53302 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:53302 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60800 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60800 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.9.66:60800 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60800 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60800 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60800 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60800 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60800 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60800 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60829 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.66:60829 - "GET /standards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44498 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:36108 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:36108 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:36108 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42508 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:59926 - "GET /standards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42508 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:59926 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:59926 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:59926 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59486 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59486 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     192.168.9.168:33516 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.168:33516 - "GET /standards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47506 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.168:45810 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.168:45810 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:56818 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36294 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.168:42220 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.168:42220 - "GET /standards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36294 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.168:42220 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.168:42220 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:42220 - "GET /fields/abs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39130 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:60450 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:60450 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:60450 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32770 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:46054 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:46054 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44350 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:57462 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:57462 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47350 - "GET /admin HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34678 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34678 - "GET /pending/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:34678 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     192.168.9.168:36666 - "GET /pending/autosar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35422 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.9.168:40772 - "GET /formats HTTP/1.1" 200 OK
+INFO:     192.168.9.168:40772 - "GET /standards HTTP/1.1" 200 OK
+INFO:     192.168.9.168:40772 - "GET /fields/internal HTTP/1.1" 200 OK
+INFO:     192.168.9.168:60474 - "GET /fields/abs HTTP/1.1" 200 OK

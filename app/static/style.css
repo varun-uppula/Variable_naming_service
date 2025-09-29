@@ -1,0 +1,43 @@
+/* app/static/style.css */
+
+/* Light background for the full page */
+body {
+    background-color: #f8f9fa;
+    font-size: 1.05rem;
+}
+
+/* Card styling: centered, smaller width */
+.card {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Bigger result text */
+#result {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Input & label spacing */
+.form-label {
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Side-by-side fields if screen is wide enough */
+#fields-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* Adjust button size */
+button.btn {
+    font-size: 1.05rem;
+    padding: 10px 20px;
+}

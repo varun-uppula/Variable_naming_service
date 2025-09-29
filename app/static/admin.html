@@ -1,0 +1,175 @@
+<!-- app/static/admin.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Pending Variables</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 30px;
+    }
+    .standard-btn {
+      margin: 5px;
+    }
+    #pending-list li {
+      padding: 8px;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      background-color: white;
+    }
+    .action-buttons {
+      margin-top: 15px;
+    }
+    #selected-standard {
+      margin: 15px 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title">Pending Variable Approvals</h3>
+
+        <div id="standards-list" class="mb-3">
+          <!-- Bootstrap buttons will be injected here -->
+        </div>
+
+        <div id="selected-standard"></div>
+
+        <ul id="pending-list" class="list-unstyled"></ul>
+
+        <div class="action-buttons d-none" id="action-buttons">
+          <button class="btn btn-secondary me-2" id="select-all-btn">
+            Select All
+          </button>
+          <button class="btn btn-success me-2" id="approve-btn">
+            Approve Selected
+          </button>
+          <button class="btn btn-danger" id="delete-btn">
+            Delete Selected
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const BACKEND_URL = "http://192.168.9.168:8000";
+    const standardsContainer = document.getElementById("standards-list");
+    const pendingList = document.getElementById("pending-list");
+    const actionButtons = document.getElementById("action-buttons");
+    const selectedStandardDiv = document.getElementById("selected-standard");
+    let currentStandard = "";
+
+    async function loadStandards() {
+      try {
+        const res = await fetch(`${BACKEND_URL}/standards`);
+        if (!res.ok) {
+          console.error("Failed to fetch standards", res.status);
+          return;
+        }
+        const data = await res.json();
+        const arr = data.standards || [];
+        arr.forEach(std => {
+          const btn = document.createElement("button");
+          btn.className = "btn btn-outline-primary standard-btn";
+          btn.innerText = std.toUpperCase();
+          btn.dataset.std = std;
+          btn.addEventListener("click", () => selectStandard(std));
+          standardsContainer.appendChild(btn);
+        });
+      } catch (err) {
+        console.error("Error loading standards", err);
+      }
+    }
+
+    async function selectStandard(std) {
+      currentStandard = std;
+      selectedStandardDiv.innerText = `Selected Standard: ${std.toUpperCase()}`;
+      pendingList.innerHTML = "";
+      actionButtons.classList.add("d-none");
+
+      try {
+        const res = await fetch(`${BACKEND_URL}/pending/${std}`);
+        if (!res.ok) {
+          console.error("Failed fetching pending", std, res.status);
+          return;
+        }
+        const data = await res.json();
+        if (!data || Object.keys(data).length === 0) {
+          pendingList.innerHTML = `<li><em>No pending variables.</em></li>`;
+        } else {
+          for (const v in data) {
+            const li = document.createElement("li");
+            const cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.value = v;
+            li.appendChild(cb);
+            li.appendChild(
+              document.createTextNode(` ${v} — ${data[v]}`)
+            );
+            pendingList.appendChild(li);
+          }
+        }
+        actionButtons.classList.remove("d-none");
+      } catch (err) {
+        console.error("Error in selectStandard", err);
+      }
+    }
+
+    document.getElementById("select-all-btn").addEventListener("click", () => {
+      const cbs = document.querySelectorAll("#pending-list input[type=checkbox]");
+      const allChecked = Array.from(cbs).every(cb => cb.checked);
+      cbs.forEach(cb => (cb.checked = !allChecked));
+    });
+
+    document.getElementById("approve-btn").addEventListener("click", async () => {
+      const selected = Array.from(
+        document.querySelectorAll("#pending-list input:checked")
+      ).map(cb => cb.value);
+      if (selected.length === 0) return alert("No variables selected.");
+      const res = await fetch(`${BACKEND_URL}/admin/actions/${currentStandard}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ variables: selected, action: "approve" }),
+      });
+      if (res.ok) {
+        alert("Approved!");
+        selectStandard(currentStandard);
+      } else {
+        alert("Failed to approve.");
+      }
+    });
+
+    document.getElementById("delete-btn").addEventListener("click", async () => {
+      const selected = Array.from(
+        document.querySelectorAll("#pending-list input:checked")
+      ).map(cb => cb.value);
+      if (selected.length === 0) return alert("No variables selected.");
+      const res = await fetch(`${BACKEND_URL}/admin/actions/${currentStandard}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ variables: selected, action: "delete" }),
+      });
+      if (res.ok) {
+        alert("Deleted!");
+        selectStandard(currentStandard);
+      } else {
+        alert("Delete failed.");
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", loadStandards);
+  </script>
+  
+</body>
+</html>

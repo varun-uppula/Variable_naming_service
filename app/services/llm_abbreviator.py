@@ -1,15 +1,110 @@
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+import json
+
+
 import cohere
 import os
 from dotenv import load_dotenv
-import json
 
-# Load environment variables from .env
+
+# Load Mistral 3B locally
+MODEL_NAME = "/home/navpc24/Desktop/llm-finetuning/Mistral-3B-Instruct-v0.2-init"
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+
+# Load model with automatic device mapping to avoid OOM
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_NAME,
+    dtype=torch.float16,      # FP16 to reduce memory
+    device_map="auto"         # Automatically split model across GPU + CPU
+)
+
+# LLM call function
+def get_abbreviation_from_llm_local(desc, known_dict):
+    prompt = f"""
+You are an expert in generating consistent, short, human-readable variable names for embedded automotive systems (e.g., AUTOSAR).
+
+Your task is to:
+- Create a PascalCase variable name for the following description: "{desc}".
+- Ignore non-technical or functional language such as:
+  - Articles (a, an, the)
+  - Prepositions (of, for, with)
+  - Generic descriptors (number, array, signal, module, value, data, info)
+  - Functional/control terms (calculate, compute, read, write, send, receive, check, detect, process, monitor, control)
+- DO NOT replace words with synonyms.
+- DO NOT invent acronyms unless explicitly listed in the known abbreviations.
+- Each technical word must be reduced to a short abbreviation (1–4 letters) by truncating or slightly shortening the word.
+- The final variable must be a direct concatenation of these abbreviations in PascalCase.
+
+⚠️ Consistency rules:
+- "final_variable" MUST be built only from abbreviations listed in:
+  1. the known abbreviations dictionary, OR
+  2. the "new_abbreviations" dictionary.
+- Every entry in "new_abbreviations" MUST appear in "final_variable" exactly as written.
+- No synonyms or reinterpretations are allowed.
+
+Known abbreviations (must be used exactly as-is):
+{json.dumps(known_dict, indent=2)}
+
+Expected Output:
+Respond ONLY in valid JSON format:
+
+{{
+  "final_variable": "GeneratedVariableName",
+  "new_abbreviations": {{}}
+}}
+"""
+
+    # Tokenize and send inputs to same device as model
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=64,
+            do_sample=True,
+            temperature=0.3,
+            top_p=0.9
+        )
+
+    raw_output = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    # Extract first JSON object
+    def extract_first_json(text):
+        brace_count = 0
+        start = None
+        for i, char in enumerate(text):
+            if char == '{':
+                if start is None:
+                    start = i
+                brace_count += 1
+            elif char == '}':
+                brace_count -= 1
+                if brace_count == 0 and start is not None:
+                    return text[start:i + 1]
+        return None
+
+    clean_json_str = extract_first_json(raw_output)
+    if not clean_json_str:
+        raise ValueError("No valid JSON object found in model response.")
+
+    clean_json_str = clean_json_str.strip()
+    print(f"Extracted JSON (length {len(clean_json_str)}):\n{repr(clean_json_str)}")
+
+    data = json.loads(clean_json_str)
+
+    final_variable = data.get("final_variable", "")
+    new_abbreviations = data.get("new_abbreviations", {})
+
+    return final_variable, new_abbreviations
+
+
+
+
+'''
+
+# generate abbreviation using Cohere API
 load_dotenv()
-
-# Access your Hugging Face API key
 CO_API_KEY = os.getenv("CO_API_KEY")
-
-
 co = cohere.Client(CO_API_KEY)  
 
 
@@ -43,46 +138,6 @@ Respond ONLY in valid JSON, in the following format:
 """
 
 
-    prompt1 = f"""
-You are an expert in generating short, human-readable abbreviations and acronyms 
-for embedded automotive systems (e.g., AUTOSAR).
-
-Input description: "{desc}"
-
-Rules:
-- Ignore non-technical function words such as articles, stop words, prepositions, auxiliary verbs, and pronouns 
-  (e.g., of, is, the, that, it, in, on, at, with, a, an).
-- For compound technical terms (e.g., "stateofcharge"), generate an acronym (e.g., "SoC").
-- For single technical words, generate a short abbreviation (max 4 letters) 
-  (e.g., "Battery" → "Batt", "Controller" → "Ctrl").
-- Combine these acronyms and abbreviations into a single shortened version that is **readable and self-explanatory**, 
-  not just initials. Example: "Battery Management System" → "BattMgmtSys".
-- The final result should be concise (max 12 characters), camel-case style, and easy to understand.
-- Never output plain acronyms of every word (like "BMS" or "BVS") unless that is the common industry standard.
-- Respond only with the final shortened version — no quotes, no explanations.
-"""
-
-
-
-    prompt1 = f"""
-You are an expert in generating short, human-readable abbreviations and acronyms 
-for embedded automotive systems (e.g., AUTOSAR).
-
-Input: "{desc}"
-
-Rules:
-- If the word is a non-technical function word such as an article,stoping word, preposition, auxiliary verb, or pronoun 
-  (e.g., of, is, the, that, it, in, on, at, with, a, an), return "" nothing.
-- Do not invent or replace with another word. Only abbreviate the given input.
-- If it is a compound term (camelCase, PascalCase, snake_case, or concatenated words like "stateofcharge"),
-  return an acronym (e.g., "stateofcharge" → "SoC").
-- If it is a single technical word then, return a short abbreviation (≤4 letters), starting with a capital letter
-  (e.g., "Battery" → "Batt").
-- Never return single ambiguous letters.
-- Respond only with the abbreviation/acronym itself — no quotes, no explanations.
-"""
-
-
     try:
 
         response = co.chat(
@@ -104,46 +159,4 @@ Rules:
         print(f"Error from Cohere Chat API: {e}")
         return None, {}
 
-
-
-'''       response = co.chat(
-            model="command-r-plus",  # Recommended current model
-            message=prompt,
-            temperature=0.2,
-            max_tokens=20
-        )
-        abbr = response.text.strip().split()[0]
-        return abbr
-    except Exception as e:
-        print(f"Error from Cohere Chat API: {e}")
-        return word
 '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,9 +1,11 @@
-from fastapi import APIRouter, Query, HTTPException, Request
+# app/api/routes.py
+from fastapi import APIRouter, Query, HTTPException, Request, Body
 from app.services.naming_service import NamingService
 import os
 import json
 from pydantic import BaseModel
-from typing import Dict
+from typing import Dict, List, Optional
+from fastapi.responses import FileResponse
 
 # -----------------------------
 # Request Models
@@ -15,13 +17,6 @@ class AbsVariableInput(BaseModel):
     unit: str 
     description: str
 
-class GenerateRequest(BaseModel):
-    format: str
-    standard: str
-    fields: Dict[str, str]
-
-class ApproveRequest(BaseModel):
-    approvals: Dict[str, str]  # { "word": "abbr", ... }
 
 # -----------------------------
 # Router Init
@@ -47,6 +42,8 @@ def save_json(path: str, data: dict):
 # -----------------------------
 # Formats & Standards
 # -----------------------------
+
+
 @router.get("/formats")
 def get_formats():
     """Return all available formats and their required fields."""
@@ -68,9 +65,6 @@ def get_standards():
         return {"standards": []}
     return {"standards": os.listdir(base_path)}
 
-# -----------------------------
-# Variable Name Generation
-# -----------------------------
 @router.get("/fields/{format}")
 def get_format_fields(format: str):
     base_path = os.path.join(os.getcwd(), f"data/naming_conventions/{format}")
@@ -79,7 +73,6 @@ def get_format_fields(format: str):
     if not os.path.exists(format_path):
         raise HTTPException(status_code=404, detail="Format not found")
 
-    # Load format.json (expects keys: fields, template)
     with open(format_path, "r") as f:
         format_config = json.load(f)
 
@@ -87,8 +80,7 @@ def get_format_fields(format: str):
     response = {}
 
     for field in fields:
-        # For each field, try to load options from corresponding JSON file
-        options_file = os.path.join(base_path, f"{field}s.json")  # e.g., modules.json, data_types.json
+        options_file = os.path.join(base_path, f"{field}s.json")
         if os.path.exists(options_file):
             with open(options_file, "r") as f:
                 options_data = json.load(f)
@@ -104,8 +96,12 @@ def get_format_fields(format: str):
 
     return {"format": format, "fields": response}
 
+
+# -----------------------------
+# Variable Name Generation
+# -----------------------------
 @router.post("/generate-variable-name/{format}/{standard}")
-async def generate_variable_name(format: str, standard: str, request: Request):
+async def gen_var_name(format: str, standard: str, request: Request):
     try:
         user_data = await request.json()
     except Exception:
@@ -114,82 +110,51 @@ async def generate_variable_name(format: str, standard: str, request: Request):
     service = NamingService(format=format, standard=standard)
 
     try:
-        variable_name = service.generate_variable_name(**user_data)
+        variable_name = service.gen_var_name(**user_data)
     except KeyError as e:
         raise HTTPException(status_code=422, detail=f"Missing required field: {e}")
 
-    if not service.check_existing(variable_name):
-        service.save_variable(name=variable_name, standard=standard, **user_data)
+    # Save to pending.json for this standard
+    pending_path = os.path.join(os.getcwd(), f"data/standards/{standard}/pending.json")
+    pending = load_json(pending_path)
+    pending[variable_name] = user_data.get("description", "")
+    save_json(pending_path, pending)
 
-    return {"variable_name": variable_name}
+    return {"variable_name": variable_name, "status": "pending"}
 
-@router.post("/generate-variable-name/abs/autosar")
-def generate_variable_name_abs_autosar(input_data: AbsVariableInput):
-    service = NamingService(format="abs", standard="autosar")
-    
-    variable_name = service.generate_variable_name(
-        module=input_data.module,
-        data_type=input_data.data_type,
-        data_size=input_data.data_size,
-        unit=input_data.unit,
-        description=input_data.description,
-    )
-    
-    return {"variable_name": variable_name}
 
 # -----------------------------
-# Abbreviation Review & Approval
+# Admin: Approval (JSON-based)
 # -----------------------------
-@router.get("/abbreviations/pending/{standard}")
-def get_pending_abbreviations(standard: str):
+@router.get("/pending/{standard}")
+def get_pending_variables(standard: str):
+    """Return all variables awaiting approval"""
     pending_path = os.path.join(os.getcwd(), f"data/standards/{standard}/pending.json")
     return load_json(pending_path)
 
-@router.post("/abbreviations/approve/{standard}")
-def approve_abbreviation(standard: str, word: str, abbr: str):
-    pending_path = os.path.join(os.getcwd(), f"data/standards/{standard}/pending.json")
-    approved_path = os.path.join(os.getcwd(), f"data/standards/{standard}/abbreviations.json")
 
-    pending = load_json(pending_path)
-    approved = load_json(approved_path)
 
-    if word in pending and pending[word] == abbr:
-        approved[word] = abbr
-        del pending[word]
-        save_json(approved_path, approved)
-        save_json(pending_path, pending)
-        return {"status": "approved", "word": word, "abbr": abbr}
 
-    raise HTTPException(status_code=404, detail="Word not found in pending list")
+@router.post("/admin/actions/{standard}")
+async def admin_actions(
+    standard: str,
+    data: dict = Body(...)
+):
+    variables = data.get("variables", [])
+    action = data.get("action", "")
 
-@router.post("/abbreviations/approve-multiple/{standard}")
-def approve_multiple_abbreviations(standard: str, req: ApproveRequest):
-    pending_path = os.path.join(os.getcwd(), f"data/standards/{standard}/pending.json")
-    approved_path = os.path.join(os.getcwd(), f"data/standards/{standard}/abbreviations.json")
+    service = NamingService(standard=standard)
 
-    pending = load_json(pending_path)
-    approved = load_json(approved_path)
+    if action == "approve":
+        approved_items = service._approve_pending_abbreviations(standard, variables)
+        if approved_items:
+            return {"status": "approved", "approved": approved_items}
+        else:
+            return {"status": "error", "message": "No variables approved"}
 
-    approved_items = {}
-    for word, abbr in req.approvals.items():
-        if word in pending and pending[word] == abbr:
-            approved[word] = abbr
-            approved_items[word] = abbr
-            del pending[word]
+    elif action == "delete":
+        service._delete_pending_abbreviations(standard, variables)
+        return {"status": "deleted", "deleted": variables}
 
-    save_json(approved_path, approved)
-    save_json(pending_path, pending)
-
-    return {"status": "approved_multiple", "approved": approved_items}
-
-@router.post("/abbreviations/reject/{standard}")
-def reject_abbreviation(standard: str, word: str):
-    pending_path = os.path.join(os.getcwd(), f"data/standards/{standard}/pending.json")
-    pending = load_json(pending_path)
-
-    if word in pending:
-        del pending[word]
-        save_json(pending_path, pending)
-        return {"status": "rejected", "word": word}
-
-    raise HTTPException(status_code=404, detail="Word not found in pending list")
+    else:
+        return {"status": "error", "message": "Invalid action"}
