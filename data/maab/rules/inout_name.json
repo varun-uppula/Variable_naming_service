@@ -1,0 +1,38 @@
+{
+  "inout_port_usable_characters": {
+    "description": "Inport and Outport block names shall only use single-byte alphanumeric characters (a-z, A-Z, 0-9) and single-byte underscore (_). Line breaks, single-byte spaces, double-byte characters, and control characters are prohibited.",
+    "pattern": "^[A-Za-z0-9_]+$",
+    "match": true
+  },
+  "inout_port_no_numbers_at_start": {
+    "description": "Inport and Outport block names shall not begin with a number.",
+    "pattern": "^[0-9]",
+    "match": false
+  },
+  "inout_port_no_underscore_at_start": {
+    "description": "Inport and Outport block names shall not begin with an underscore.",
+    "pattern": "^_",
+    "match": false
+  },
+  "inout_port_no_underscore_at_end": {
+    "description": "Inport and Outport block names shall not end with an underscore.",
+    "pattern": "_$",
+    "match": false
+  },
+  "inout_port_no_consecutive_underscores": {
+    "description": "Inport and Outport block names shall not contain consecutive underscores.",
+    "pattern": "__",
+    "match": false
+  },
+  "inout_port_not_reserved_matlab_word": {
+    "description": "Inport and Outport block names shall not consist solely of a single reserved MATLAB keyword.",
+    "function": "validate_not_reserved_matlab_word"
+  },
+  "inout_port_max_name_length": {
+    "description": "Inport and Outport block name length shall be a maximum of 63 characters.",
+    "function": "validate_max_length",
+    "params": {
+      "max_length": 63
+    }
+  }
+}

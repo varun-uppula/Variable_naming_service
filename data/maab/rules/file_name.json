@@ -1,0 +1,42 @@
+{
+  "usable_characters_for_file_names": {
+    "description": "File names shall only use single-byte alphanumeric characters (a-z, A-Z, 0-9) and single-byte underscore (_). Line breaks, spaces, double-byte characters, and control characters are prohibited.",
+    "pattern": "^[A-Za-z0-9_]+$",
+    "match": true
+  },
+  "no_numbers_at_start": {
+    "description": "File name shall not begin with a number.",
+    "pattern": "^[0-9]",
+    "match": false
+  },
+  "no_underscore_at_start": {
+    "description": "File name shall not begin with an underscore.",
+    "pattern": "^_",
+    "match": false
+  },
+  "no_underscore_at_end": {
+    "description": "File name shall not end with an underscore.",
+    "pattern": "_$",
+    "match": false
+  },
+  "no_consecutive_underscores": {
+    "description": "File name shall not contain consecutive underscores.",
+    "pattern": "__",
+    "match": false
+  },
+  "not_reserved_matlab_word": {
+    "description": "File name shall not be solely a reserved MATLAB keyword.",
+    "function": "validate_not_reserved_matlab_word"
+  },
+  "unique_file_name_on_path": {
+    "description": "File names on the MATLAB path shall be unique; duplicate names are not allowed.",
+    "function": "validate_unique_file_name_on_path"
+  },
+  "max_model_file_name_length": {
+    "description": "Model file name length shall be a maximum of 63 characters, excluding dots and file extension.",
+    "function": "validate_max_length",
+    "params": {
+      "max_length": 63
+    }
+  }
+}

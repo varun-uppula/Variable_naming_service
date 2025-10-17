@@ -133,8 +133,6 @@ def get_pending_variables(standard: str):
     return load_json(pending_path)
 
 
-
-
 @router.post("/admin/actions/{standard}")
 async def admin_actions(
     standard: str,

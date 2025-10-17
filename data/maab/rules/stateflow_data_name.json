@@ -1,0 +1,28 @@
+{
+  "stateflow_data_no_underscore_at_start": {
+    "description": "Stateflow data names shall not begin with an underscore.",
+    "pattern": "^_",
+    "match": false
+  },
+  "stateflow_data_no_underscore_at_end": {
+    "description": "Stateflow data names shall not end with an underscore.",
+    "pattern": "_$",
+    "match": false
+  },
+  "stateflow_data_no_consecutive_underscores": {
+    "description": "Stateflow data names shall not contain consecutive underscores.",
+    "pattern": "__",
+    "match": false
+  },
+  "stateflow_data_not_reserved_matlab_word": {
+    "description": "Stateflow data names shall not consist solely of a single reserved MATLAB keyword.",
+    "function": "validate_not_reserved_matlab_word"
+  },
+  "stateflow_data_max_length": {
+    "description": "Stateflow data name length shall be a maximum of 63 characters.",
+    "function": "validate_max_length",
+    "params": {
+      "max_length": 63
+    }
+  }
+}

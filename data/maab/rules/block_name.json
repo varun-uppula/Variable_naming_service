@@ -1,0 +1,38 @@
+{
+  "block_usable_characters": {
+    "description": "Basic block names shall only use single-byte alphanumeric characters (a-z, A-Z, 0-9) and single-byte underscore (_). Line breaks and single-byte spaces are not permitted when adding new block names (except allowed for Inport and Outport blocks initially). Double-byte characters and control characters are prohibited.",
+    "pattern": "^[A-Za-z0-9_]+$",
+    "match": true
+  },
+  "block_no_numbers_at_start": {
+    "description": "Basic block names shall not begin with a number (except Inport and Outport blocks).",
+    "pattern": "^[0-9]",
+    "match": false
+  },
+  "block_no_underscore_at_start": {
+    "description": "Basic block names shall not begin with an underscore (except Inport and Outport blocks).",
+    "pattern": "^_",
+    "match": false
+  },
+  "block_no_underscore_at_end": {
+    "description": "Basic block names shall not end with an underscore (except Inport and Outport blocks).",
+    "pattern": "_$",
+    "match": false
+  },
+  "block_no_consecutive_underscores": {
+    "description": "Basic block names shall not contain consecutive underscores (except Inport and Outport blocks).",
+    "pattern": "__",
+    "match": false
+  },
+  "block_not_reserved_matlab_word": {
+    "description": "Basic block names shall not consist solely of a single reserved MATLAB keyword (except Inport and Outport blocks).",
+    "function": "validate_not_reserved_matlab_word"
+  },
+  "block_max_name_length": {
+    "description": "Basic block name length shall be a maximum of 63 characters.",
+    "function": "validate_max_length",
+    "params": {
+      "max_length": 63
+    }
+  }
+}

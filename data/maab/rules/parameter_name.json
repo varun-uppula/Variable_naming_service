@@ -1,0 +1,23 @@
+{
+  "parameter_name_no_underscore_at_end": {
+    "description": "Parameter names shall not end with an underscore.",
+    "pattern": "_$",
+    "match": false
+  },
+  "parameter_name_no_consecutive_underscores": {
+    "description": "Parameter names shall not contain consecutive underscores.",
+    "pattern": "__",
+    "match": false
+  },
+  "parameter_name_not_reserved_matlab_word": {
+    "description": "Parameter names shall not consist solely of a single reserved MATLAB keyword.",
+    "function": "validate_not_reserved_matlab_word"
+  },
+  "parameter_name_max_length": {
+    "description": "Parameter name length shall be a maximum of 63 characters.",
+    "function": "validate_max_length",
+    "params": {
+      "max_length": 63
+    }
+  }
+}
