@@ -1,43 +1,85 @@
-/* app/static/style.css */
-
-/* Light background for the full page */
+/* General body style */
 body {
-    background-color: #f8f9fa;
-    font-size: 1.05rem;
+  background-color: #f8f9fa;
+  font-size: 1.05rem;
 }
 
-/* Card styling: centered, smaller width */
+/* Reusable card style */
 .card {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
-/* Bigger result text */
-#result {
-    font-weight: bold;
-    font-size: 1.1rem;
+/* Main container card for form */
+.main-card {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-/* Input & label spacing */
+/* Form label styling */
 .form-label {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* Side-by-side fields if screen is wide enough */
-#fields-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-/* Adjust button size */
+/* Input and button spacing */
 button.btn {
-    font-size: 1.05rem;
-    padding: 10px 20px;
+  font-size: 1.05rem;
+  padding: 10px 20px;
+}
+
+/* Responsive form layout container */
+#fields-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Results grid container */
+#results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+  #results {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual result card */
+.result-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Passed/Failed badge colors */
+.result-card .badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.result-card .badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+/* Bold result value */
+#result {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Limit width for main layout container */
+.container.mt-5 {
+  max-width: 700px;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }

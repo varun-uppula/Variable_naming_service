@@ -1,13 +1,12 @@
 # app/api/routes.py
 from fastapi import APIRouter, Query, HTTPException, Request, Body
 from app.services.naming_service import NamingService
+from app.services.maab_validator import MaabValidator
 import os
 import json
 from pydantic import BaseModel
 from typing import Dict, List, Optional
-from fastapi.responses import FileResponse
-
-# -----------------------------
+from fastapi.responses import FileResponse,JSONResponse
 # Request Models
 # -----------------------------
 class AbsVariableInput(BaseModel):
@@ -17,6 +16,8 @@ class AbsVariableInput(BaseModel):
     unit: str 
     description: str
 
+class NameInput(BaseModel):
+    name: str
 
 # -----------------------------
 # Router Init
@@ -156,3 +157,48 @@ async def admin_actions(
 
     else:
         return {"status": "error", "message": "Invalid action"}
+    
+
+
+# -----------------------------
+# MAAB Validation Routes
+# -----------------------------
+
+# 1. List available components
+
+
+@router.get("/components")
+def get_components():
+    """Load components dynamically from components.json"""
+    base_path = os.path.join(os.getcwd(), "data", "maab")
+    components_path = os.path.join(base_path, "components.json")
+
+    if not os.path.exists(components_path):
+        raise HTTPException(status_code=404, detail="components.json not found")
+
+    try:
+        with open(components_path, "r") as f:
+            components = json.load(f)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading components: {e}")
+
+    return JSONResponse(content={"standards": components})
+
+# 3. Validate a name for a given component
+@router.post("/validate/{component}")
+def validate_name(component: str, body: NameInput):
+    """Validate name based on MAAB rules for the selected component."""
+    name = body.name
+
+    try:
+        validator = MaabValidator(component)
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail=f"No rules found for component '{component}'")
+
+    results = validator.validate(name)
+    return {
+        "component": component,
+        "name": name,
+        "results": results
+    }
+

@@ -20,6 +20,14 @@ def read_index():
 def read_admin():
     return FileResponse("app/static/admin.html")
 
+@app.get("/index")
+def read_index():
+    return FileResponse("app/static/index.html")
+
+@app.get("/maab")
+def read_index():
+    return FileResponse("app/static/maab.html")
+
 
 # CORS
 app.add_middleware(

@@ -56,7 +56,7 @@ Respond ONLY in valid JSON format:
 """
 
     # Tokenize and send inputs to same device as model
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    inputs = tokenizer(prompt1, return_tensors="pt").to(model.device)
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
@@ -96,6 +96,72 @@ Respond ONLY in valid JSON format:
     new_abbreviations = data.get("new_abbreviations", {})
 
     return final_variable, new_abbreviations
+
+
+prompt1 = """
+following are the rules that should be followed to generate a file name in matlab:
+{
+  "usable_characters_for_file_names": {
+    "description": "File names shall only use single-byte alphanumeric characters (a-z, A-Z, 0-9) and single-byte underscore (_). Line breaks, spaces, double-byte characters, and control characters are prohibited.",
+  },
+  "no_numbers_at_start": {
+    "description": "File name shall not begin with a number.",
+  },
+  "no_underscore_at_start": {
+    "description": "File name shall not begin with an underscore.",
+  },
+  "no_underscore_at_end": {
+    "description": "File name shall not end with an underscore.", 
+
+  },
+  "no_consecutive_underscores": {
+    "description": "File name shall not contain consecutive underscores.",
+  },
+  "not_reserved_matlab_word": {
+    "description": "File name shall not be solely a reserved MATLAB keyword.",
+  },
+  "unique_file_name_on_path": {
+    "description": "File names on the MATLAB path shall be unique; duplicate names are not allowed.",
+  },
+  "max_model_file_name_length": {
+    "description": "Model file name length shall be a maximum of 63 characters, excluding dots and file extension.",
+    "params": {
+      "max_length": 63
+    }
+  }
+}
+generate a variable name for the description: "this file stores the data related to vehicle speed and acceleration"
+output should be in json format only like this:
+{  "final_variable": "VehSpdAccDataFile"}
+"""
+print(get_abbreviation_from_llm_local("", {}))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

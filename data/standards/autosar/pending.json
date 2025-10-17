@@ -1,6 +1,4 @@
 {
-    "management": "MN",
-    "system": "Sys",
     "stringstringstring_string_BattMngtSys": "Battery Management System",
     "contactor": "Cont",
     "stuck open": "StuckOpen",
@@ -116,7 +114,7 @@
     "CaAtddrv_A_BattRespUnit": "battery response unit",
     "a_Soc_A_BattRespUnit_C__koushik": "battery response unit",
     "module": "Mdl",
-    "CaAtddrv_A_AxlrBattMdl": "axillary battery module",
+    "CaAtddrv_A_AxlrBattMdl": "axulary battery module",
     "CaAtddrv_A_AxlrBattSt": "axillary battery state",
     "a_Soc_A_AxlrBattMdl_C__koushik": "axillary battery module",
     "software": "Sftw",
@@ -131,5 +129,6 @@
     "ambadi": "Ambd",
     "CaAtddrv_A_KshkAmbd": "koushik ambadi",
     "CaAtddrv_kW_KshkAmbd": "koushik ambadi",
-    "CaAtddrv_A_Tmp": "temporary"
+    "CaAtddrv_A_Tmp": "temporary",
+    "axulary": "Axlr"
 }
